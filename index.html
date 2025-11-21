@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شرق > غرب</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Reem+Kufi:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                800: '#1a1a2e',
+                900: '#16213e',
+              },
+              gold: {
+                400: '#e9c46a',
+                500: '#c5a059',
+                600: '#b08d55',
+              },
+              earth: {
+                100: '#f4f1ea',
+                800: '#4a403a'
+              }
+            },
+            fontFamily: {
+              sans: ['Cairo', 'sans-serif'],
+              kufi: ['Reem Kufi', 'sans-serif'],
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #1a1a2e;
+        color: #f4f1ea;
+        overflow-x: hidden;
+      }
+      .glass-panel {
+        background: rgba(26, 26, 46, 0.85);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(197, 160, 89, 0.2);
+      }
+      .gold-gradient-text {
+        background: linear-gradient(to bottom, #e9c46a, #c5a059);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #16213e; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c5a059; 
+        border-radius: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
